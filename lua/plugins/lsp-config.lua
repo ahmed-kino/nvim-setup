@@ -12,11 +12,20 @@ return {
 				ensured_installed = {
 					"lua_ls",
 					"tsserver",
+					"eslint_d",
 					"pyright",
+					"black",
+					"gitlint",
+					"isort",
+					"mypy",
+					"prettier",
+					"ruff",
+					"stylua",
 				},
 			})
 		end,
 	},
+
 	{
 		"neovim/nvim-lspconfig",
 		config = function()

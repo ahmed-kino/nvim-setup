@@ -14,6 +14,7 @@ return {
 				null_ls.builtins.completion.spell,
 				-- null_ls.builtins.diagnostics.eslint_d,
 				null_ls.builtins.diagnostics.mypy,
+				require("none-ls.diagnostics.ruff"),
 				null_ls.builtins.diagnostics.gitlint,
 				require("none-ls.diagnostics.eslint_d"), -- requires none-ls-extras.nvim
 			},

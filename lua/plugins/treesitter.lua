@@ -7,8 +7,11 @@ return {
       auto_install = true,
       -- ensure_installed = {"asm", "c", "cpp", "rust", "go", "python", "lua", "vim", "vimdoc", "heex", "javascript", "typescript", "html" },
       sync_install = false,
-      highlight = { enable = true },
-      indent = { enable = true },  
+      highlight = {
+        enable = true,
+        disable = { "gitcommit" },
+      },
+      indent = { enable = true },
     })
-  end
+  end,
 }
