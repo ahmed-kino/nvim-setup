@@ -8,15 +8,15 @@ return {
 		null_ls.setup({
 			sources = {
 				null_ls.builtins.formatting.stylua,
-				null_ls.builtins.formatting.prettier,
-				null_ls.builtins.formatting.black,
+				null_ls.builtins.formatting.black.with({
+					extra_args = { "--line-length=128" },
+				}),
 				null_ls.builtins.formatting.isort,
 				null_ls.builtins.completion.spell,
-				-- null_ls.builtins.diagnostics.eslint_d,
-				null_ls.builtins.diagnostics.mypy,
-				require("none-ls.diagnostics.ruff"),
+				null_ls.builtins.diagnostics.mypy.with({
+					extra_args = { "--ignore-missing-imports" },
+				}),
 				null_ls.builtins.diagnostics.gitlint,
-				require("none-ls.diagnostics.eslint_d"), -- requires none-ls-extras.nvim
 			},
 		})
 
