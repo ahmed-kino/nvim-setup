@@ -12,9 +12,14 @@ return {
 					extra_args = { "--line-length=128" },
 				}),
 				null_ls.builtins.formatting.isort,
+				null_ls.builtins.formatting.prettier,
 				null_ls.builtins.completion.spell,
 				null_ls.builtins.diagnostics.mypy.with({
-					extra_args = { "--ignore-missing-imports" },
+					extra_args = {
+						"--ignore-missing-imports",
+						"--config-file",
+						vim.fn.expand("~/.config/nvim/pyproject.toml"),
+					},
 				}),
 				null_ls.builtins.diagnostics.gitlint,
 			},
