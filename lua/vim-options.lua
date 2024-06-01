@@ -7,3 +7,4 @@ vim.cmd("set relativenumber")
 vim.g.mapleader = " " -- setup leader key
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 10
+vim.api.nvim_set_hl(0, "Cursor", { reverse = true })
